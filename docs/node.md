@@ -14,17 +14,17 @@ A node represents a collection of services that are loaded together. For more in
 
 ```js
 
-var index = require('qtumcore-node');
-var Qtum = index.services.Qtum;
+var index = require('eurekacoincore-node');
+var EurekaCoin = index.services.EurekaCoin;
 var Node = index.Node;
 
 var configuration = {
-  datadir: '/home/user/.qtum',
+  datadir: '/home/user/.eurekacoin',
   network: 'testnet',
   services: [
     {
-      name: 'qtumd',
-      module: Qtum,
+      name: 'eurekacoind',
+      module: EurekaCoin,
       config: {}
     }
   ]
@@ -37,7 +37,7 @@ node.start(function() {
 });
 
 node.on('ready', function() {
-  console.log('Qtumcoin Node Ready');
+  console.log('EurekaCoincoin Node Ready');
 });
 
 node.on('error', function(err) {
